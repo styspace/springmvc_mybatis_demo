@@ -2,10 +2,10 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.styspace</groupId>
-	<artifactId>springmvc_maven_demo</artifactId>
+	<artifactId>springmvc_mybatis_demo</artifactId>
 	<packaging>war</packaging>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>springmvc_maven_demo Maven Webapp</name>
+	<name>springmvc_mybatis_demo Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<!-- 一般属性 -->
 	<properties>
@@ -72,6 +72,11 @@
 		    <groupId>org.slf4j</groupId>  
 		    <artifactId>slf4j-log4j12</artifactId>  
 		    <version>1.7.7</version>  
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.7</version>
 		</dependency>
 		
 		<!-- 阿里json解析转换类 -->
