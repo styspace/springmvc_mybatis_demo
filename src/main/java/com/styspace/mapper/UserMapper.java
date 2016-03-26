@@ -19,5 +19,14 @@ import com.styspace.pojo.User;
  *
  */
 public interface UserMapper {
+	/**
+	 * 插入用户信息
+	 * insertUser
+	 * @param user 用户信息
+	 * @return
+	 *boolean
+	 * @exception
+	 * @since  1.0.0
+	 */
 	public boolean insertUser(User user);
 }

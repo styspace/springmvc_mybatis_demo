@@ -5,7 +5,7 @@
  * styspace Copyright (c) 2013-2016 All Rights Reserved.
  *
  */
-package com.styspace.controller.base;
+package com.styspace.controller;
 
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -15,7 +15,9 @@ import com.styspace.constant.ResultCodeConstant;
 import com.styspace.constant.ResultDescConstant;
 import com.styspace.pojo.GlobalResult;
 
+
 /**
+ * controller基类
  * @ClassName BaseController
  * @Description 
  * @date 2016年3月16日 下午6:31:09

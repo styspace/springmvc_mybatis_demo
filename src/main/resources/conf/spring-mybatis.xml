@@ -19,10 +19,15 @@
 	<!-- 扫描文件（自动注入） -->
 	<context:component-scan base-package="com.styspace"/>
 	
-	<!-- 数据库配置文件 --> 
+	<!-- 配置文件 --> 
 	<bean id="propertyConfigurer" 
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="location" value="classpath:conf/jdbc.properties" />
+		<property name="locations">
+		<list>
+			<value>classpath:conf/jdbc.properties</value>
+			<value>classpath:conf/config.properties</value>
+		</list>
+		</property>
 	</bean> 
 	
 	<!-- 配置数据源 -->

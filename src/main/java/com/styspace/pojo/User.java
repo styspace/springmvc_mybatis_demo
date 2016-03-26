@@ -7,6 +7,8 @@
  */
 package com.styspace.pojo;
 
+import java.io.Serializable;
+
 /**
  * @ClassName User
  * @Description 
@@ -15,7 +17,14 @@ package com.styspace.pojo;
  * @version 1.0.0
  *
  */
-public class User {
+public class User implements Serializable {
+	/**
+	 * serialVersionUID:TODO
+	 *
+	 * @since 1.0.0
+	 */
+	
+	private static final long serialVersionUID = 1L;
 	/**
 	 * 用户id
 	 */

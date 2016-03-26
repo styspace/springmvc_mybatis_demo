@@ -15,6 +15,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.styspace.dao.UserDao;
 import com.styspace.pojo.User;
 import com.styspace.service.interfaces.UserService;
+import com.styspace.utils.MemcacheHepler;
+
 
 /**
  * @ClassName UserServiceImpl
@@ -25,9 +27,11 @@ import com.styspace.service.interfaces.UserService;
  *
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends BaseServiceImpl implements UserService {
 	@Autowired
 	private UserDao userDao;
+	@Autowired
+	private MemcacheHepler memcacheHepler;
 
 	/* (non-Javadoc)
 	 * @see com.styspace.service.interfaces.UserService#insertUser(com.styspace.pojo.User)
@@ -43,6 +47,13 @@ public class UserServiceImpl implements UserService {
 			return null;
 		}
 		User user = new User(userName, password);
+		String key = userName + password;
+		Object memCache = memcacheHepler.get(key);
+		if(memCache != null){
+			return "dwa";
+		}else{
+			memcacheHepler.set(key, user, 60 * 10);
+		}
 		boolean isSuccess = userDao.register(user);
 		return isSuccess;
 	}

@@ -27,6 +27,15 @@ public class UserDao {
 	@Autowired
 	private UserMapper userMapper;
 	
+	/**
+	 * 用户注册
+	 * register
+	 * @param user 用户信息
+	 * @return
+	 *boolean
+	 * @exception
+	 * @since  1.0.0
+	 */
 	public boolean register(User user) {
 		return userMapper.insertUser(user);
 	}

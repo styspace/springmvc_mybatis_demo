@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.styspace.controller.base.BaseController;
 import com.styspace.service.interfaces.UserService;
 
 /**
@@ -35,6 +34,15 @@ public class UserController extends BaseController{
 	@Autowired
 	private UserService userService;
 	
+	/**
+	 * 用户注册
+	 * register
+	 * @param data
+	 * @return
+	 *Object
+	 * @exception
+	 * @since  1.0.0
+	 */
 	@RequestMapping(value="/register.do", method=RequestMethod.POST)
 	@ResponseBody
 	public Object register(@RequestParam("data") String data) {
